@@ -21,6 +21,10 @@
     },
 
     setup: function() {
+      if (!functions.hasLocalStorage()) {
+        alert('Please use a browser that supports local storage.');
+      }
+
       var $this = $(this);   
       var data = $this.data('taskTracker');
 
@@ -82,18 +86,14 @@
     
     // Store the list of objects in localstorage
     storeLocalList: function(obj) {
-      if (functions.hasLocalStorage()) {
-        localStorage.setItem('taskTracker', JSON.stringify(obj));
-      }
+      localStorage.setItem('taskTracker', JSON.stringify(obj));
     },  
     
     // Get the list of objects from localstorage
     getLocalList: function(id) {
-      if (functions.hasLocalStorage()) {
-        var item = localStorage.getItem('taskTracker');
-        if (item !== '' && item !== null) {
-          return jQuery.parseJSON(item);
-        }
+      var item = localStorage.getItem('taskTracker');
+      if (item !== '' && item !== null) {
+        return jQuery.parseJSON(item);
       }
       return [];
     },
