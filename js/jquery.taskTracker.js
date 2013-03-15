@@ -71,7 +71,11 @@
       var task = {};
       var $inpts = $this.find('input[type=text]');
       $inpts.each(function(i, elem) {
-        task[elem.getAttribute('name')] = elem.value;
+        if (jQuery.trim(elem.value) === '') {
+          task[elem.getAttribute('name')] = 'TBA';
+        } else {
+          task[elem.getAttribute('name')] = elem.value;
+        }
       });
       return task;
     },
