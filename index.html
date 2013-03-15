@@ -29,6 +29,7 @@
             <section class='col-right'>
                 <h2>Existing Tasks</h2>
                 <table class='task-container'>
+                    <!--
                     <tr>
                         <td class='task'>Task Name</td>
                         <td class='date'>12/07/2012</td>
@@ -48,11 +49,9 @@
                         <td class='task'>Task Name</td>
                         <td class='date'>12/07/2012</td>
                         <td>John Doe</td>
-                    </tr>
+                    </tr>-->
                 </table>
             </section>
-
-
 
             <section class='col-left'>
                 <form>
@@ -61,29 +60,30 @@
                         <li>
                             <label>
                                 Task Name<br>
-                                <input type='text' name='task_name' />
+                                <input type='text' name='name' value='Name'/>
                             </label>
                         </li>
                         <li>
                             <label>
                                 Date<br>
-                                <input type='text' name='created_date' />
+                                <input type='text' name='date' value='1/1/2013'/>
                             </label>
                         </li>
                         <li>
                             <label>
                                 Assigned To<br>
-                                <input type='text' name='assignee' />
+                                <input type='text' name='assigned' value='Chris Lepore'/>
                             </label>
                         </li>
                     </ul>
-                    <button type='button'>Submit</button>
+                    <button type='submit'>Submit</button>
                 </form>
             </section>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
+        <script src="js/jquery.taskTracker.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
