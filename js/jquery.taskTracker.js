@@ -22,7 +22,8 @@
 
     setup: function() {
       if (!functions.hasLocalStorage()) {
-        alert('Please use a browser that supports local storage.');
+        alert('Please use a browser that supports localstorage or this is useless.');
+        return false;
       }
 
       var $this = $(this);   
